@@ -25,7 +25,7 @@
 
  2. Traing a model to preset linear formula.[y = 9.5*x + 2.7]
 
-**-- Lab 02 -- **
+**-- Lab 02 --**
 
  ..
 
