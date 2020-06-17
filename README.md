@@ -35,7 +35,7 @@
 
  4. Use the model trained during step 2 to predict 20 pair of data.
 
- 5. Use RMSE to verify the pridction result.
+ 5. Use RMSE to verify the prediction results.
 
 
 
