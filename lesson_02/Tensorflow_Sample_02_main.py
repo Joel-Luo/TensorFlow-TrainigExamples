@@ -122,9 +122,11 @@ with tf.device('/cpu:0'):
         deNormal_Predict_y = denormalize(Prdict_y)
         RMSE_Value = np.sqrt(((deNormal_Predict_y - deNormal_Test_y) ** 2).mean())
 
-        print( "Denormalize value-> \n Predict_y: ",  
-               np.array2string(deNormal_Predict_y, formatter={'float_kind':lambda x: "%.2f" % x}), "\n\n",
-               "Test_y: ", deNormal_Test_y)
+        print( "Denormalize value-> ",
+        	   "\n\nPredict_y: ",  
+               np.array2string(deNormal_Predict_y, formatter={'float_kind':lambda x: "%.2f" % x}), 
+               "\n\nTest_y: ", 
+               np.array2string(deNormal_Test_y, formatter={'float_kind':lambda x: "%.2f" % x}))
 
         print("RMSE error is: ", "{:.9f}".format(RMSE_Value))
 
