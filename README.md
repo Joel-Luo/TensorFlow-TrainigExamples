@@ -21,13 +21,21 @@
 
 **-- Lab 01 --**
 
- 1. Using Test data and Create simple model to demo tf working flow.
+ 1. Create simple model to demo tensorflow working flow.
 
- 2. Traing a model to preset linear formula.[y = 9.5*x + 2.7]
+ 2. Traing a model to preset linear formula. [y = 9.5*x + 2.7].
 
 **-- Lab 02 --**
+ 
+ 1. Create simple model to demo tensorflow working flow.
 
- ..
+ 2. Traing a model to preset linear formula. [y = 9.5*x + 2.7].
+
+ 3. Use normalize methodology to scale(transform) data into range(-1, 1).
+
+ 4. Use the model trained during step 2 to predict 20 pair of data.
+
+ 5. Use RMSE to verify the pridction result.
 
 
 

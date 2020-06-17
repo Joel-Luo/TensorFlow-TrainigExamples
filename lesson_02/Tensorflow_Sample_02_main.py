@@ -7,7 +7,11 @@ import tensorflow as tf
 # -------------------- Define Noramliaztion -----------------------------------
 min_max_scaler = sklearn.preprocessing.MinMaxScaler(feature_range=(-1, 1))
 def normalize( OriginalDataSource: np ):
-    DS_Norm = min_max_scaler.fit_transform(OriginalDataSource)
+    temp = []
+    ColCount = OriginalDataSource.shape[1]
+    for row in range(ColCount):
+        temp.append( min_max_scaler.fit_transform(OriginalDataSource[:,row].reshape(-1, 1)).flatten())
+    DS_Norm = np.array(temp).T
     return DS_Norm
 # End def
 
@@ -50,7 +54,6 @@ df_DataSource = pd.read_csv(path)
 TotalDataCount = df_DataSource.__len__()
 TraningDataCount = 3000
 TestDataCount = TotalDataCount - TraningDataCount
-
 # -----------------------------------------------------------------------------
 
 # -------------------- Step2. Normalization, Normaliza all data ---------------
@@ -58,8 +61,8 @@ df_Norm = normalize(df_DataSource.to_numpy())
 # -----------------------------------------------------------------------------
 
 # -------------------- Step3. Split Input/Output Data -------------------------
-InputData = df_Norm[:3000, 0:1].reshape(-1, InputDim)
-OutputData = df_Norm[:3000, 1].reshape(-1, OutputDim)
+InputData = df_Norm[:TraningDataCount, 0:1].reshape(-1, InputDim)
+OutputData = df_Norm[:TraningDataCount, 1].reshape(-1, OutputDim)
 # -----------------------------------------------------------------------------
 
 # -------------------- Step4. Create Network structure ------------------------
@@ -105,10 +108,27 @@ with tf.device('/cpu:0'):
         print('Test Data Count =', TestDataCount)
 
         duration = time() - startTime
-        print("Train Finished takes:", "{:.3f}".format(duration), "s")
+        print("Train Finished, takes:", "{:.3f}".format(duration), "s")
 
 
-        
+        # Predict Test Data       
+        TestData_x = df_Norm[TraningDataCount:, 0:1].reshape(-1, InputDim)
+        TestData_y = df_Norm[TraningDataCount:, 1].reshape(-1, OutputDim)
+
+        Prdict_y = sess.run(y_predict, feed_dict={ x: TestData_x })
+
+        # Denormalize to get real value.
+        deNormal_Test_y = denormalize(TestData_y)
+        deNormal_Predict_y = denormalize(Prdict_y)
+        RMSE_Value = np.sqrt(((deNormal_Predict_y - deNormal_Test_y) ** 2).mean())
+
+        print( "Denormalize value-> \n Predict_y: ",  
+               np.array2string(deNormal_Predict_y, formatter={'float_kind':lambda x: "%.2f" % x}), "\n\n",
+               "Test_y: ", deNormal_Test_y)
+
+        print("RMSE error is: ", "{:.9f}".format(RMSE_Value))
+
+
     # End with
 # End with
 
