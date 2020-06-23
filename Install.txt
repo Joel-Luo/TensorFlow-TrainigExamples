@@ -1,0 +1,17 @@
+Linux ubuntu Version
+
+
+Install Anaconda Env
+Step1. Download install script 
+> wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh
+
+Step2. Execute Bash script
+> bash Anaconda3-2020.02-Linux-x86_64.sh -b
+
+Step3. Export Execute env
+> sudo vim ~./bashrc
+> Add anaconda env path
+
+Step4. Source bashrc
+> source ~/.bashrc
+
