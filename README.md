@@ -21,13 +21,13 @@
 
 **-- Lab 01 --**
 
- 1. Create simple model to demo tensorflow working flow.
+ 1. Create simple model to demonstrate tensorflow working flow.
 
  2. Traing a model to preset linear formula. [y = 9.5*x + 2.7].
 
 **-- Lab 02 --**
  
- 1. Create simple model to demo tensorflow working flow.
+ 1. Create simple model to demonstrate tensorflow working flow.
 
  2. Traing a model to preset linear formula. [y = 9.5*x + 2.7].
 
