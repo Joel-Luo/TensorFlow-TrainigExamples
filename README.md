@@ -23,15 +23,15 @@
 
  1. Create simple model to demonstrate tensorflow working flow.
 
- 2. Traing a model to preset linear formula. [y = 9.5*x + 2.7].
+ 2. Training a model to preset linear formula. [y = 9.5*x + 2.7].
 
 **-- Lab 02 --**
  
  1. Create simple model to demonstrate tensorflow working flow.
 
- 2. Traing a model to preset linear formula. [y = 9.5*x + 2.7].
+ 2. Training a model to preset linear formula. [y = 9.5*x + 2.7].
 
- 3. Use normalize methodology to scale(transform) data into range(-1, 1).
+ 3. Use normalize methodology to scale(transform) data in range(-1, 1).
 
  4. Use the model trained during step 2 to predict 20 pair of data.
 
@@ -39,12 +39,12 @@
 
 **-- Lab 03 --**
 
- 1. Extend the Lab 02, and  create  more complex NN  model.  
+ 1. Extend the Lab 02,  create more complex NN model.  
  
- 2. Demonstrate that how to build a DNN structure . 
+ 2. Demonstrate that how to build multi-layer neural network. 
 
 **-- Lab 04 --**
 
- 1. Using Tensorflow Saver module to demonstrate saving model have trained as metadata file.
+ 1. Use tf saver module to demonstrate saving trained model as metadata file.
 
- 2. Using Tensorflow Saver module to demonstrate restoring model from metadata file.
+ 2. Use tf saver module to demonstrate restoring model from metadata file.
