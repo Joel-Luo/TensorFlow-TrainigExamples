@@ -43,3 +43,8 @@
  
  2. Demonstrate that how to build a DNN structure . 
 
+**-- Lab 04 --**
+
+ 1. Using Tensorflow Saver module to demonstrate saving model have trained as metadata file.
+
+ 2. Using Tensorflow Saver module to demonstrate restoring model from metadata file.

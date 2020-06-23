@@ -41,7 +41,6 @@ def Next_Batch(InputData, OutputData, startIndex, batchSize):
 # End def
 # -----------------------------------------------------------------------------
 
-
 def main():
 
     # -------------------- Define Param -------------------------------------------
@@ -76,7 +75,6 @@ def main():
     # Create Training network
     h1 = layer( output_dim=HiddenDim, input_dim=InputDim, inputs=x, activation=tf.nn.relu)
     y_predict = layer( output_dim=OutputDim, input_dim=HiddenDim, inputs=h1, activation=None)
-    
     
     # Create Regression optimization param
     loss_function = tf.reduce_mean(tf.square(y_predict - y_target))
