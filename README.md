@@ -8,9 +8,9 @@
 
 ### &nbsp;&nbsp;&nbsp; Libraries used
 
-> *  [Pandas](http://pandas.pydata.org)
-> *  [Numpy](http://www.numpy.org)
-> *  [TensorFlow](https://www.tensorflow.org)
+> *  [Pandas-1.0.1](http://pandas.pydata.org)
+> *  [Numpy-1.16.4](http://www.numpy.org)
+> *  [TensorFlow-CPU](https://www.tensorflow.org)
     
 
 ## Quick Start
