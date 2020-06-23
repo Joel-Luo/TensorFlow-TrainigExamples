@@ -37,5 +37,9 @@
 
  5. Use RMSE to verify the prediction results.
 
+**-- Lab 03 --**
 
+ 1. Extend the Lab 02, and  create  more complex NN  model.  
+ 
+ 2. Demonstrate that how to build a DNN structure . 
 
