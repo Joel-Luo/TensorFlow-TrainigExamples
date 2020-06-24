@@ -22,8 +22,8 @@ def denormalize( NormalizedDataSource: np, min_max_scaler):
 
 # -------------------- Define NN layer ----------------------------------------
 def layer(output_dim, input_dim, inputs, activation=None):
-    W = tf.Variable(tf.random_normal([input_dim, output_dim]))
-    b = tf.Variable(tf.random_normal([1, output_dim]))
+    W = tf.Variable(tf.compat.v1.random_normal([input_dim, output_dim]))
+    b = tf.Variable(tf.compat.v1.random_normal([1, output_dim]))
     XWb = tf.matmul(inputs, W) + b
     if activation is None:
         outputs = XWb
@@ -69,8 +69,8 @@ def main():
     # -----------------------------------------------------------------------------
     
     # -------------------- Step4. Create Network structure ------------------------
-    x = tf.placeholder("float", [None, InputDim])
-    y_target = tf.placeholder("float", [None, OutputDim])
+    x = tf.compat.v1.placeholder("float", [None, InputDim])
+    y_target = tf.compat.v1.placeholder("float", [None, OutputDim])
     
     # Create Training network
     h1 = layer( output_dim=HiddenDim, input_dim=InputDim, inputs=x, activation=tf.nn.relu)
@@ -87,8 +87,8 @@ def main():
     totalBatchs = int(TraningDataCount/batchSize)
     
     with tf.device('/cpu:0'):
-        with tf.Session() as sess:
-            sess.run( tf.global_variables_initializer())
+        with tf.compat.v1.Session() as sess:
+            sess.run( tf.compat.v1.global_variables_initializer())
             startTime = time()
     
             # Do the Traning epoch
@@ -111,7 +111,7 @@ def main():
     
             # Save Model
             SaveModelPath = './Model/PredictModel.ckpt'
-            ModelSaver = tf.train.Saver()
+            ModelSaver = tf.compat.v1.train.Saver()
             save_path = ModelSaver.save(sess, SaveModelPath)
             print("Predict Model saved in file: %s" % save_path)
 

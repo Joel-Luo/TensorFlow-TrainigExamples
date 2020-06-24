@@ -23,12 +23,12 @@ def main():
     # -----------------------------------------------------------------------------
     
     # -------------------- Step3. Create Tensorflow module(graphic) ---------------
-    W = tf.Variable(tf.random_normal([1,1]))
-    b = tf.Variable(tf.random_normal([1,1]))
+    W = tf.Variable(tf.compat.v1.random_normal([1,1]))
+    b = tf.Variable(tf.compat.v1.random_normal([1,1]))
     
     ## Create Container for attaching Input/label data
-    x = tf.placeholder(tf.float32, [None, 1])
-    y = tf.placeholder(tf.float32, [None, 1])
+    x = tf.compat.v1.placeholder(tf.float32, [None, 1])
+    y = tf.compat.v1.placeholder(tf.float32, [None, 1])
     
     # Build a simple network
     linear_model = tf.matmul(x,W) + b
@@ -37,14 +37,14 @@ def main():
     loss = tf.reduce_mean(tf.square(linear_model - y))
     
     # optimizer
-    train = tf.train.AdamOptimizer(0.01).minimize(loss)
+    train = tf.compat.v1.train.AdamOptimizer(0.01).minimize(loss)
     # -----------------------------------------------------------------------------
     
     # -------------------- Step4. Run Graphic -------------------------------------
     with tf.device('/cpu:0'):
     	
-        with tf.Session() as sess:
-            init = tf.global_variables_initializer()
+        with tf.compat.v1.Session() as sess:
+            init = tf.compat.v1.global_variables_initializer()
             sess.run(init)
     
             # loop for optimization

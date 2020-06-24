@@ -22,8 +22,8 @@ def denormalize( NormalizedDataSource: np, min_max_scaler):
 
 # -------------------- Define NN layer ----------------------------------------
 def layer(output_dim, input_dim, inputs, activation=None):
-    W = tf.Variable(tf.random_normal([input_dim, output_dim]))
-    b = tf.Variable(tf.random_normal([1, output_dim]))
+    W = tf.Variable(tf.compat.v1.random_normal([input_dim, output_dim]))
+    b = tf.Variable(tf.compat.v1.random_normal([1, output_dim]))
     XWb = tf.matmul(inputs, W) + b
     if activation is None:
         outputs = XWb
@@ -69,15 +69,15 @@ def main():
     # -----------------------------------------------------------------------------
     
     # -------------------- Step4. Create Network structure ------------------------
-    x = tf.placeholder("float", [None, InputDim])
-    y_target = tf.placeholder("float", [None, OutputDim])
+    x = tf.compat.v1.placeholder("float", [None, InputDim])
+    y_target = tf.compat.v1.placeholder("float", [None, OutputDim])
     
     # Create Training network
     y_predict, W, b = layer( output_dim=OutputDim, input_dim=InputDim, inputs=x, activation=None)
     
     # Create Regression optimization param
     loss_function = tf.reduce_mean(tf.square(y_predict - y_target))
-    optimizer = tf.train.AdamOptimizer(learning_rate=0.001).minimize(loss_function)
+    optimizer = tf.compat.v1.train.AdamOptimizer(learning_rate=0.001).minimize(loss_function)
     # -----------------------------------------------------------------------------
     
     # -------------------- Step5. Define Training Epoch ---------------------------
@@ -89,8 +89,8 @@ def main():
     loss_list = []
     
     with tf.device('/cpu:0'):
-        with tf.Session() as sess:
-            sess.run( tf.global_variables_initializer())
+        with tf.compat.v1.Session() as sess:
+            sess.run( tf.compat.v1.global_variables_initializer())
             startTime = time()
     
             # Do the Traning epoch
