@@ -135,7 +135,7 @@ def main():
 
     # -----------------------------------------------------------------------------
             
-    print( "Finished lesson_03 Demo" )
+    print( "Finished Lesson_03 Demo" )
 
 # End main def 
 

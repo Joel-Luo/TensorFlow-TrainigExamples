@@ -125,7 +125,7 @@ def main():
 
     # -----------------------------------------------------------------------------
             
-    print( "Finished lesson_03 Demo" )
+    print( "Finished Lesson_04-RestoreMode Demo" )
 
 # End main def 
 

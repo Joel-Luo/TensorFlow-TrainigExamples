@@ -67,7 +67,7 @@ def main():
     
     # -----------------------------------------------------------------------------
             
-    print( "Finished lesson_01 Demo" )
+    print( "Finished Lesson_01 Demo" )
 
 # End main def
 
