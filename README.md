@@ -48,3 +48,7 @@
  1. Use tf saver module to demonstrate saving trained model as metadata file.
 
  2. Use tf saver module to demonstrate restoring model from metadata file.
+
+**-- Sample Project - StockPredictor --**
+ 
+ -- To predict the stock close price of next day.
