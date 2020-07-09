@@ -23,13 +23,13 @@
 
  1. Create simple model to demonstrate tensorflow working flow.
 
- 2. Training a model to preset linear formula. [y = 9.5*x + 2.7].
+ 2. Train a model to preset linear formula. [y = 9.5*x + 2.7].
 
 **-- Lab 02 --**
  
  1. Create simple model to demonstrate tensorflow working flow.
 
- 2. Training a model to preset linear formula. [y = 9.5*x + 2.7].
+ 2. Train a model to preset linear formula. [y = 9.5*x + 2.7].
 
  3. Use normalize methodology to scale(transform) data in range(-1, 1).
 
