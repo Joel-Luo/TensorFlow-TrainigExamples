@@ -33,9 +33,11 @@
 
  3. Use normalize methodology to scale(transform) data in range(-1, 1).
 
- 4. Use the model trained during step 2 to predict 20 pair of data.
+ 4. Use MSE as loss function to do training
 
- 5. Use RMSE to verify the prediction results.
+ 5. Use the model trained during step 2 to predict 20 pair of data.
+
+ 6. Use RMSE to verify the prediction results.
 
 **-- Lab 03 --**
 
