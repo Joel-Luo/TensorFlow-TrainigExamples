@@ -15,7 +15,7 @@
 > *  [Numpy-1.16.4](http://www.numpy.org)
 > *  [TensorFlow-CPU](https://www.tensorflow.org)
 
-### &nbsp;&nbsp;&nbsp; Install Instal action - step by step
+### &nbsp;&nbsp;&nbsp; Install action - step by step
 > * Reference [Install.txt](https://github.com/Joel-Luo/TensorFlow-TrainigExamples/blob/master/Install.txt)
    
 
