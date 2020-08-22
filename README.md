@@ -11,9 +11,9 @@
 
 ### &nbsp;&nbsp;&nbsp; Libraries used
 
-> *  [Pandas-1.0.1](http://pandas.pydata.org)
-> *  [Numpy-1.16.4](http://www.numpy.org)
-> *  [TensorFlow-CPU](https://www.tensorflow.org)
+> *  [Pandas - 1.0.1](http://pandas.pydata.org)
+> *  [Numpy - 1.16.4](http://www.numpy.org)
+> *  [TensorFlow-CPU - 1.14.0](https://www.tensorflow.org)
 
 ### &nbsp;&nbsp;&nbsp; Install action - step by step
 > * Reference [Install.txt](https://github.com/Joel-Luo/TensorFlow-TrainigExamples/blob/master/Install.txt)
