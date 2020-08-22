@@ -1,5 +1,8 @@
 # Tensorflow lesson lab
-  For learning Tensorflow lab.
+  For learning Tensorflow.
+
+## Training Course Resources
+  > * Reference [TensorflowTraining.pdf](https://github.com/Joel-Luo/tf_lesson_lab/blob/master/README.pdf)
 
 ## Install
 
